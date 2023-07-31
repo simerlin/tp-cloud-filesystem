@@ -1,0 +1,55 @@
+## Think-Filesystem-cloud
+
+### 要求
+   - php 8.0
+   - topthink/framework 8.0.0
+   
+### 使用
+```php
+composer require simerlin/think-filesystem-cloud
+```   
+
+### 配置
+config/filesystem.php
+```php
+"disks" => [
+    // oss 配置
+    'oss' => [
+        'type'   => 'oss',
+        'prefix' => '',
+        'access_key' => '';
+        'secret_key' => '';
+        'end_point'  => ''; // ssl：https://iidestiny.com
+        'bucket'     => '';
+        'is_cname'   => true
+    ],
+    // 七牛配置
+    'qiNiu' => [
+        'type'       => 'qiNiu',
+        'access_key' => '',
+        'secret_key' => '',
+        'bucket'     => '',
+        'domain'     => '',
+    ],
+    // 腾讯云配置
+    'qCloud' => [
+        'type'        => 'qCloud',
+        'region'      => '',
+            'credentials' => [
+                'appId'      => , // 域名中数字部分
+                'secretId'   => '',
+                'secretKey'  => '',
+            ],
+            'bucket'          => 'test',
+            'timeout'         => 60,
+            'connect_timeout' => 60,
+            'cdn'             => '您的 CDN 域名',
+            'scheme'          => 'https',
+            'read_from_cdn'   => false,
+    ]
+```
+
+### 感谢
+   - [jaguarjack/think-filesystem-cloud](https://github.com/jaguarjack/think-filesystem-cloud)
+### 协议
+ MIT

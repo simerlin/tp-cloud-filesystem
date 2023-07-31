@@ -1,0 +1,6 @@
+# 忽略目录
+vendor/
+.idea/
+
+# 忽略composer lock
+composer.lock
